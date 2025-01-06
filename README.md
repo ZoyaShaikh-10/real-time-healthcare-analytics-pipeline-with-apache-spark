@@ -1,51 +1,47 @@
-# Real-Time Healthcare Analytics Pipeline with Azure
+
+
+# Real-Time Healthcare Patient Monitoring System with Apache Spark and Azure Event Hub
 
 ## Overview
-This project demonstrates how to build a real-time healthcare analytics pipeline using Azure Event Hub, Azure Stream Analytics, Azure SQL Database, and Power BI to monitor health data such as patient reactions, drug administration errors, and overdose incidents. The pipeline processes real-time reports from pharmaceutical safety data (e.g., Food And Drugs Administration (FDA) reports). It visualizes key metrics like patient age, drug usage, and reaction types for proactive monitoring and insights.
-
+This project implements a real-time healthcare monitoring system using Azure Event Hub, Apache Spark, and other Azure services. The system ingests and processes healthcare safety reports to analyze patient data in real-time. The data, which includes patient reactions to drugs, age, and other health-related metrics, is processed using Spark for anomaly detection, trend analysis, and other insights.
 
 ## High-Level Architecture
 
-**1. Healthcare Safety Reports**:
--  This data includes patient reactions, drug abuse cases, and administration errors. For example, reactions like "DRUG ADMINISTRATION ERROR" or "OVERDOSE" are tracked.
+**1. Python:** Used for generating mock data and integrating the data flow into the system.
 
-**2. Azure Event Hub**:
+**2. Azure Event Hub:** A managed service that facilitates the ingestion of high-throughput API real-time data.
 
+**3. Apache Spark (Azure Databricks):** Real-time processing of the ingested data for analytics, anomaly detection, and transformation.
 
--  Azure Event Hub is used to ingest real-time healthcare safety reports, including incident details such as reaction types, drug usage, patient age, and gender.
+**4. Azure SQL Database:** Stores processed data for querying and reporting.
 
+**5. Azure Data Lake Storage:** Stores raw and intermediate data for historical analysis.
 
-**3. Azure Stream Analytics**:
+**6. Power BI:** For visualization and reporting of the processed healthcare data.
 
--  This component processes incoming reports, performs transformations (e.g., aggregations, filtering), and prepares the data for storage and analysis.
+## Project WorkFlow
 
-**4. Azure SQL Database:**
+**1. Mock Data Generation:**
 
--  The processed data is stored in Azure SQL Database, which can be queried for analysis and reporting.
-
-**5. Power BI:**
-
--  Power BI provides real-time dashboards to monitor safety metrics, such as the number of overdose incidents, drug-related reactions, and trends in patient demographics (e.g., age and sex).
-
-
-## Project Workflow
-
-**1. Data Generation:**
-
--  Real-time safety reports from the pharmaceutical industry, such as FDA data, are used. Reports include details like patient reactions (e.g., "DRUG ADMINISTRATION ERROR"), drug information (e.g., "DURAGESIC-100"), and patient details (age, sex, etc.).
+-   A Python script generates mock healthcare safety report data in the JSON format
 
 **2. Data Ingestion:**
 
--  The real-time reports are sent to Azure Event Hub for processing. This could involve data from sources like FDA Public Use or other pharmaceutical safety systems.
+-   The Python script continuously generates this mock data and sends it to Azure Event Hub for ingestion.
+-   Azure Event Hub allows for the ingestion of large volumes of real-time data, handling each event in a scalable and low-latency manner.
 
 **3. Data Processing:**
 
--  Azure Stream Analytics processes the data to identify and transform key health events. For example, reaction types like "OVERDOSE" and "DRUG ADMINISTRATION ERROR" are extracted and prepared for storage.
+-   Apache Spark processes the real-time data from Event Hub using Azure Databricks.
 
 **4. Data Storage:**
 
--  The processed data is stored in an Azure SQL Database to enable detailed querying, tracking, and analysis.
+-   After processing, the data is stored in Azure SQL Database for structured querying and reporting.
+-   Raw and transformed data is also stored in Azure Data Lake Storage for historical analysis and long-term storage.
 
-**5. Data Visualization:**
 
--  Power BI provides interactive dashboards and real-time monitoring of key metrics such as patient reactions, drug abuse incidents, age distribution, and reaction types.
+**5. Visualization:**
+
+-   Data is visualized using Power BI to provide healthcare providers with insights on patient safety and drug reactions.
+-   Dashboards are updated in real-time to reflect the most current patient monitoring data.
+
