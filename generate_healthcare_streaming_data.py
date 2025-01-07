@@ -50,5 +50,5 @@ class APIMockData:
                 await producer.send_batch(event_data_batch)
                 print(f"Batch with {len(data.get('results', []))} events sent to Event Hub.")
 
-            # Sleep for 10 seconds before fetching new data
-            await asyncio.sleep(10)
+            # Sleep for 60 seconds before fetching new data
+            await asyncio.sleep(60)
