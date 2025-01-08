@@ -25,12 +25,14 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 
 -   The Python script continuously generates this mock data and sends it to Azure Event Hub for ingestion.
 -   Azure Event Hub allows for the ingestion of large volumes of real-time data, handling each event in a scalable and low-latency manner.
-![plot](./healtcare-pipeline-image/eventhub_data_ingestion.png)
+  
+![plot](healthcare-pipeline-images/eventhub_data_ingestion.png)
 
 
 **3. Data Processing:**
 
 -   Apache Spark processes the real-time data from Event Hub using Azure Databricks.
+  
 ![plot](./healtcare-pipeline-image/databrick_load_data.png)
 ![plot](./healtcare-pipeline-image/databrick_transform_data.png)
 
@@ -38,6 +40,7 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 **4. Data Storage:**
 
 -   After processing, the data is stored in Azure SQL Database for structured querying and reporting.
+
 ![plot](./healtcare-pipeline-image/SQL_load_data.png)
 
 
