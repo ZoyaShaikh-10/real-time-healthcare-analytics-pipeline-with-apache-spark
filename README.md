@@ -15,9 +15,7 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 
 **4. Azure SQL Database:** Stores processed data for querying and reporting.
 
-**5. Azure Data Lake Storage:** Stores raw and intermediate data for historical analysis.
-
-**6. Power BI:** For visualization and reporting of the processed healthcare data.
+**5. Power BI:** For visualization and reporting of the processed healthcare data.
 
 ## Project WorkFlow
 
@@ -37,7 +35,6 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 **4. Data Storage:**
 
 -   After processing, the data is stored in Azure SQL Database for structured querying and reporting.
--   Raw and transformed data is also stored in Azure Data Lake Storage for historical analysis and long-term storage.
 
 
 **5. Visualization:**
