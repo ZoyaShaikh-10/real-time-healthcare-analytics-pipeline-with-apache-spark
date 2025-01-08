@@ -33,16 +33,16 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 
 -   Apache Spark processes the real-time data from Event Hub using Azure Databricks.
   
-![plot](healthcare-pipeline-image/databrick_load_data.png)
+![plot](healthcare-pipeline-images/databrick_load_data.png)
 
-![plot](healthcare-pipeline-image/databrick_transform_data.png)
+![plot](healthcare-pipeline-images/databrick_transform_data.png)
 
 
 **4. Data Storage:**
 
 -   After processing, the data is stored in Azure SQL Database for structured querying and reporting.
 
-![plot](healthcare-pipeline-image/SQL_load_data.png)
+![plot](healthcare-pipeline-images/SQL_load_data.png)
 
 
 
