@@ -3,6 +3,8 @@
 ## Overview
 This project implements a real-time healthcare monitoring system using Azure Event Hub, Apache Spark, and other Azure services. The system ingests and processes healthcare safety reports to analyze patient data in real-time. The data, which includes patient reactions to drugs, age, and other health-related metrics, is processed using Spark for anomaly detection, trend analysis, and other insights.
 
+![plot](healthcare-pipeline-images/flow_diagram.png)
+
 ## High-Level Architecture
 
 **1. Python:** Used for generating mock data and integrating the data flow into the system.
@@ -14,6 +16,7 @@ This project implements a real-time healthcare monitoring system using Azure Eve
 **4. Azure SQL Database:** Stores processed data for querying and reporting.
 
 **5. Power BI:** For visualization and reporting of the processed healthcare data.
+
 
 ## Project WorkFlow
 
